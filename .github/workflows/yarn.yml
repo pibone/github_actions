@@ -28,5 +28,4 @@ jobs:
       - run: npm install -g yarn
       - run: yarn --version
       - run: pwd
-      - run: cd .github
-      - run: pwd
+      - run: cd .github; pwd
