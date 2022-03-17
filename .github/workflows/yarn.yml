@@ -26,6 +26,5 @@ jobs:
         with:
           node-version: 16
       - run: npm install -g yarn
-      - run: yarn --version
-      - run: pwd
-      - run: cd .github; pwd
+      - run: yarn install
+        working-directory: web-extension
