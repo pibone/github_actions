@@ -29,7 +29,8 @@ jobs:
       - run: tree
       - run: npm install -g yarn
       - run: yarn install
-      - run: yarn build:publish
+      - run: echo $GITHUB_WORKSPACE
+#       - run: yarn build:publish
       - uses: trmcnvn/chrome-addon@v2
         with:
           client-id: ${{ secrets.GOOGLE_CLIENT_ID }}
