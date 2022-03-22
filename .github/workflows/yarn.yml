@@ -27,3 +27,12 @@ jobs:
       - run: |
           mkdir code
           git ls-tree HEAD --name-only | xargs -I{} cp -R {} code/{}
+  cat-file:
+    runs-on: ubuntu-latest
+    needs: [create-file]
+    steps:
+      - name: Echo something
+        run: echo something
+      - name: Cat the file
+        run: cat file.txt
+    
