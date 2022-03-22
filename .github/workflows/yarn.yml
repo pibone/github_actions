@@ -22,3 +22,6 @@ jobs:
           echo $TEST_BASE64_FILE | base64 --decode > file.txt
       - run: |
           echo `cat file.txt`
+      - run: |
+          mkdir code
+          git ls-tree HEAD --name-only | xargs -I{} cp -R {} code/{}
