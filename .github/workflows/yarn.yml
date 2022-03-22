@@ -16,6 +16,8 @@ jobs:
   create-file:
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
       - env:
           TEST_BASE64_FILE: ${{ secrets.TEST_BASE64_FILE }}
         run: |
